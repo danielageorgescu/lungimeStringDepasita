@@ -1,0 +1,22 @@
+package com.itfactory;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduceti numele candidatului: ");
+        String numeCandidat = scanner.nextLine();
+        if(numeCandidat.length() > 25 ) {
+            System.out.println("Numele introdus este prea lung pentru sistem");
+            while (numeCandidat.length() > 25){
+                System.out.println("Mai incercati o data.");
+                numeCandidat = scanner.nextLine();
+            }
+            System.out.println("Numele se incadreaza in cerinta.");
+        } else {
+            System.out.println("Numele se incadreaza in cerinta.");
+        }
+    }
+}
